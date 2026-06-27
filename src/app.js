@@ -20,5 +20,7 @@ app.get('/', (req, res) => {
 app.use((req, res) => {
   res.status(404).json({ error: 'Ruta no encontrada' });
 });
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
 
 module.exports = app;
