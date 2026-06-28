@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth');
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: 'http://localhost:3000' })); // habilita CORS para tu frontend
+app.use(cors({ origin: 'https://front-web-pink.vercel.app' })); // habilita CORS para tu frontend
 app.use(express.json());
 
 // Rutas principales
