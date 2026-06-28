@@ -6,8 +6,17 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
+
+const originesPermitidos = [
+  'https://front-web-pink.vercel.app', 
+  'http://localhost:3000'
+];
+
 // Middlewares
-app.use(cors({ origin: 'https://front-web-pink.vercel.app' })); // habilita CORS para tu frontend
+app.use(cors({ 
+  origin: originesPermitidos,
+  credentials: true 
+})); 
 app.use(express.json());
 
 // Rutas principales
